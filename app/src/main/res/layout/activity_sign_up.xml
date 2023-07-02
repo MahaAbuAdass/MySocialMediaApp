@@ -35,9 +35,10 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:orientation="vertical"
-        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="@+id/titleTv"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/titleTv"
         app:layout_constraintTop_toBottomOf="@+id/titleTv">
 
@@ -46,59 +47,59 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your name"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/emailEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:hint="Enter your email address"
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="32dp"/>
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/passwordEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:hint="Enter your password"
-            android:inputType="textPassword"
-            android:layout_marginTop="32dp"/>
+            android:inputType="textPassword" />
 
         <EditText
             android:id="@+id/confirmPasswordEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:hint="Confirm your password"
-            android:inputType="textPassword"
-            android:layout_marginTop="32dp"/>
+            android:inputType="textPassword" />
 
 
         <Button
             android:id="@+id/signupBtn"
-            android:text="Sign Up"
-            android:layout_marginTop="32dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Sign Up" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
             android:gravity="center"
-            android:layout_marginTop="8dp">
+            android:orientation="horizontal">
 
             <TextView
-                android:text="If you already have an account"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="If you already have an account" />
 
             <TextView
                 android:id="@+id/openLoginPageTv"
-                android:text="Click here to Log in"
-                android:textColor="@color/blue"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_height="wrap_content"/>
+                android:text="Click here to Log in"
+                android:textColor="@color/blue" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>
