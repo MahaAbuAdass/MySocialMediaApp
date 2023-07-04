@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/EditprofileToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+            <TextView
+                android:id="@+id/Cancel_in_EditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="66dp"
+                android:text="Edit Profile"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/Cancel_in_EditProfile"
+                app:layout_constraintEnd_toEndOf="@+id/Done_in_editprofile"
+                app:layout_constraintStart_toEndOf="@+id/Cancel_in_EditProfile"
+                app:layout_constraintTop_toTopOf="@+id/Cancel_in_EditProfile"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/Done_in_editprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:textSize="20sp"
+                android:layout_marginStart="90dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image_in_editprofile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/baseline_account_circle_24_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditprofileToolbar" />
+
+    <TextView
+        android:id="@+id/Edit_picture_in_editprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_image_in_editprofile" />
+
+    />
+
+    <TextView
+        android:id="@+id/Name_in_editprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="17sp"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Edit_picture_in_editprofile" />
+                />
+
+    <EditText
+        android:id="@+id/add_name_in_editprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/Name_in_editprofile"
+        app:layout_constraintTop_toTopOf="@+id/Name_in_editprofile"
+        app:layout_constraintend_toendOf="parent" />
+
+
+    <TextView
+        android:id="@+id/UserName_in_editprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="17sp"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name_in_editprofile" />
+    />
+
+    <EditText
+        android:id="@+id/edit_username_in_editprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/UserName_in_editprofile"
+        app:layout_constraintTop_toTopOf="@+id/UserName_in_editprofile"
+        app:layout_constraintend_toendOf="parent" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bio"
+        android:textSize="17sp"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_username_in_editprofile" />
+    />
+
+    <EditText
+        android:id="@+id/add_info_in_editprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/info"
+        app:layout_constraintStart_toEndOf="@+id/info"
+        app:layout_constraintTop_toTopOf="@+id/info"
+        app:layout_constraintend_toendOf="parent" />
+
+    <TextView
+        android:id="@+id/Gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:textSize="17sp"
+        android:layout_marginTop="33dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_info_in_editprofile" />
+    />
+
+    <EditText
+        android:id="@+id/username_in_editprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+
+        android:inputType=""
+        app:layout_constraintBottom_toBottomOf="@+id/Gender"
+        app:layout_constraintStart_toEndOf="@+id/Gender"
+        app:layout_constraintTop_toTopOf="@+id/Gender"
+        app:layout_constraintend_toendOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
