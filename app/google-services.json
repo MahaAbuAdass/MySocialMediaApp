@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "335061707231",
+    "project_id": "mysocialmediaapp-2f40b",
+    "storage_bucket": "mysocialmediaapp-2f40b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335061707231:android:8da5d9585355c342a97c6a",
+        "android_client_info": {
+          "package_name": "com.abuadass.mysocialmediaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335061707231-8qnc694cfk32590jn44h3sr806leo8he.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC22D9hrhD3y_W1LNK-UIFFrpXFqujuTkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335061707231-8qnc694cfk32590jn44h3sr806leo8he.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

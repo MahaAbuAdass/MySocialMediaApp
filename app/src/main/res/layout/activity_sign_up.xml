@@ -5,103 +5,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="23dp">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/welcomeTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Up Page"
-        android:textColor="@color/black"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/titleTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Please enter your registration info to sign up"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@id/welcomeTv"
-        app:layout_constraintStart_toStartOf="@+id/welcomeTv"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeTv" />
-
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="@+id/titleTv"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/titleTv"
-        app:layout_constraintTop_toBottomOf="@+id/titleTv">
+        android:layout_height="match_parent"
+        android:padding="32dp">
 
-        <EditText
-            android:id="@+id/nameEt"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/welcomeTv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter your name"
-            android:inputType="textPersonName" />
+            android:text="Sign Up Page"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/emailEt"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Please enter your registration info to sign up"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17sp"
             android:layout_marginTop="32dp"
-            android:hint="Enter your email address"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/passwordEt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:hint="Enter your password"
-            android:inputType="textPassword" />
-
-        <EditText
-            android:id="@+id/confirmPasswordEt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:hint="Confirm your password"
-            android:inputType="textPassword" />
-
-
-        <Button
-            android:id="@+id/signupBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Sign Up" />
+            app:layout_constraintEnd_toEndOf="@id/welcomeTv"
+            app:layout_constraintStart_toStartOf="@+id/welcomeTv"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTv" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/titleTv"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/titleTv"
+            app:layout_constraintTop_toBottomOf="@+id/titleTv">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/nameEt"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="If you already have an account" />
+                android:hint="Enter your name"
+                android:inputType="textPersonName" />
 
-            <TextView
-                android:id="@+id/openLoginPageTv"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="Click here to Log in"
-                android:textColor="@color/blue" />
+                android:layout_marginTop="32dp"
+                android:hint="Enter your username"
+                android:inputType="textPersonName" />
 
+            <EditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="Enter your email address"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="Enter your password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/confirmPasswordEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:hint="Confirm your password"
+                android:inputType="textPassword" />
+
+
+            <Button
+                android:id="@+id/signupBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Sign Up" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="If you already have an account" />
+
+                <TextView
+                    android:id="@+id/openLoginPageTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Click here to Log in"
+                    android:textColor="@color/blue" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/lL_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/transparent_black">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
