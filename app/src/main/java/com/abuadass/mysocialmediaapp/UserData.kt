@@ -9,7 +9,6 @@ data class UserData(
     var profilePictureURL: String,
     var bio: String,
     var gender: String,
-    var posts: MutableList<PostData>,
-    var savedPosts: MutableList<PostData>,
+    var savedPosts: MutableList<String>,
     var likedPosts: MutableList<String>
 )
