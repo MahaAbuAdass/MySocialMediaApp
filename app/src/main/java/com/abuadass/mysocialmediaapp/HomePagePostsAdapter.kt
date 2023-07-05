@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import de.hdodenhof.circleimageview.CircleImageView
 
 class HomePagePostsAdapter(private val postsList: List<PostData>):
@@ -24,7 +25,11 @@ class HomePagePostsAdapter(private val postsList: List<PostData>):
     }
 
     override fun onBindViewHolder(holder: PostsViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val currentPost = postsList[position]
+        holder.usernameText.text = currentPost.username
+
+        Glide.with(holder.itemView).load(currentPost.postImageURL).into(holder.postImage)
+        Glide.with(holder.itemView).load(currentPost.userProfilePictureURL).into(holder.userImage)
     }
 
     class PostsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
@@ -35,9 +40,6 @@ class HomePagePostsAdapter(private val postsList: List<PostData>):
         var commentButton: ImageView = itemView.findViewById(R.id.iv_comment_post_button)
         var shareButton : ImageView = itemView.findViewById(R.id.iv_share_post_button)
         var saveButton : ImageView = itemView.findViewById(R.id.iv_save_post_button)
-        var viewComment : TextView = itemView.findViewById(R.id.tv_view_post_comments_button)
-
-
-
+        var viewCommentButton : TextView = itemView.findViewById(R.id.tv_view_post_comments_button)
     }
 }
