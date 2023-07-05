@@ -31,6 +31,13 @@ class HomePagePostsAdapter(private val postsList: List<PostData>):
         var userImage: CircleImageView = itemView.findViewById(R.id.iv_user_post_image)
         var usernameText: TextView = itemView.findViewById(R.id.tv_user_post_name)
         var postImage: ImageView = itemView.findViewById(R.id.imageView)
+        var likeButton: ImageView = itemView.findViewById(R.id.iv_like_post_button)
+        var commentButton: ImageView = itemView.findViewById(R.id.iv_comment_post_button)
+        var shareButton : ImageView = itemView.findViewById(R.id.iv_share_post_button)
+        var saveButton : ImageView = itemView.findViewById(R.id.iv_save_post_button)
+        var viewComment : TextView = itemView.findViewById(R.id.tv_view_post_comments_button)
+
+
 
     }
 }
