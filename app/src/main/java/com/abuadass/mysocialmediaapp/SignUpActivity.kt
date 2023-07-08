@@ -110,7 +110,7 @@ class SignUpActivity : AppCompatActivity(), OnClickListener {
             profilePictureURL = "",
             bio = "",
             gender = "",
-            posts = mutableListOf(),
+    //       posts = mutableListOf(),
             likedPosts = mutableListOf(),
             savedPosts = mutableListOf(),
             username = username

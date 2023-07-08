@@ -9,6 +9,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -23,6 +24,8 @@ class HomePageActivity : AppCompatActivity(), OnClickListener {
     private lateinit var loader: LinearLayoutCompat
 
     private lateinit var auth: FirebaseAuth
+
+    private lateinit var floatingActionButtton : FloatingActionButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
@@ -32,9 +35,11 @@ class HomePageActivity : AppCompatActivity(), OnClickListener {
         logoutButton = findViewById(R.id.iv_log_out_button)
         postsRecyclerView = findViewById(R.id.rv_posts)
         loader = findViewById(R.id.lL_loader)
+        floatingActionButtton = findViewById(R.id.floatingActionButton)
 
         myProfileButton.setOnClickListener(this)
         logoutButton.setOnClickListener(this)
+        floatingActionButtton.setOnClickListener(this)
 
         getAllPostsFromDatabase()
     }
@@ -81,8 +86,16 @@ class HomePageActivity : AppCompatActivity(), OnClickListener {
             openProfilePage()
         }else if(v?.id == R.id.iv_log_out_button){
             logoutUser()
+        } else if (v?.id==R.id.floatingActionButton){
+            openCreatePostPage()
         }
     }
+
+    private fun openCreatePostPage() {
+        startActivity(Intent(this, CreatePostActivity::class.java))
+
+    }
+
     private fun openProfilePage() {
         val userID = auth.currentUser?.uid
         val intent = Intent(this, UserProfileActivity::class.java)
