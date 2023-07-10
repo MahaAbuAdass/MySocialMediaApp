@@ -37,10 +37,10 @@
 
     </RelativeLayout>
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/iv_userpost_image"
-        android:layout_width="444dp"
-        android:layout_height="444dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/baseline_image_24"
         app:layout_constraintBottom_toTopOf="@+id/uploadpostimagebutton"
         app:layout_constraintEnd_toEndOf="parent"
